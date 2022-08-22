@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Controls.TableViewControl">
+
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Contact">
+                <TextCell Text="Email"
+                          Detail="info@info.com"/>
+                <EntryCell Label="Phone"
+                           Placeholder="(530) 222 22 22"/>
+                <SwitchCell Text="Notifications" On="True"/>
+
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="15,0">
+                        <Label Text="Start" VerticalOptions="Center"/>
+                        <DatePicker Date="5/5/2022"
+                                    HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </ViewCell>
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+    
+</ContentPage>

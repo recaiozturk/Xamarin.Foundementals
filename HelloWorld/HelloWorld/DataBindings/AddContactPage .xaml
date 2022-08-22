@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.DataBindings.AddContactPage" 
+             Padding="0,40"
+             xmlns:converters="clr-namespace:HelloWorld.Converters">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Gray"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <converters:IntToBoolConverter x:Key="intToBool"/>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <StackLayout Padding="10" Spacing="10">
+        <Label Text="Name"/>
+        <Entry Text="{Binding Name}"
+               Placeholder="Full Name"/>
+
+
+        <Label Text="Phone"/>
+        <Entry Text="{Binding Phone}"
+               Placeholder="Phone"/>
+
+        <Label  Text="Website"/>
+        <Entry x:Name="txtWebsite" Text="{Binding Website}"
+               Placeholder="Website"/>
+
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Label Text="Favorite"/>
+            <Switch IsToggled="{Binding Favorite}"/>
+        </StackLayout>
+
+        <Label Text="{Binding DisplayMessage}"/>
+
+        <Button x:Name="openWebsiteButton" Text="Open Website"
+                IsEnabled="{Binding Source={x:Reference txtWebsite},Path=Text.Length,Converter={StaticResource intToBool}}"
+                Command="{Binding LaunchWebSiteCommand}"/>
+        <Button Text="Save Contact"
+                Command="{Binding SaveContactCommand}"/>
+
+        <ActivityIndicator IsRunning="{Binding Isbusy}"/>
+
+        <StackLayout BackgroundColor="yellow">
+            <Label Text="{Binding Name,StringFormat='Your Name is :{0}'}"/>
+            <Label Text="{Binding Phone,StringFormat='Your Phone Numbber is {0:(000) 000-0000}'}"/>
+            <Label Text="{Binding Website,StringFormat='https//{0}'}"/>
+
+            <StackLayout BindingContext="{Binding DateAdded}">
+                <Label Text="{Binding}"/>
+                <Label Text="{Binding StringFormat='short date:{0:d}'}"/>
+                <Label Text="{Binding StringFormat='long date:{0:D}'}"/>
+                <Label Text="{Binding StringFormat='{0:dd/MM/yyyy}'}"/>
+            </StackLayout>
+        </StackLayout>
+
+
+    </StackLayout>
+    
+    
+</ContentPage>

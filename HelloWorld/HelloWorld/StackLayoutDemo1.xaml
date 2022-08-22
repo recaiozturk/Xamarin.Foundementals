@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.StackLayoutDemo1"
+             BackgroundColor="#006E7F"
+             >
+
+    <StackLayout Spacing="20"
+                 VerticalOptions="Center">
+        <Label Text="Awsome App"
+               TextColor="White"
+               FontAttributes="Bold"
+               FontSize="32"
+               HorizontalOptions="Center"/>
+
+        <Label Text="Welcome to Awsome App"
+               TextColor="White"
+               FontAttributes="Bold"
+               FontSize="20"
+               HorizontalOptions="Center"/>
+
+        <StackLayout Orientation="Horizontal" Padding="15">
+            <Button Text="Login" 
+                    TextColor="White" 
+                    BackgroundColor="#EE5007"
+                    HorizontalOptions="FillAndExpand"/>
+
+
+            <Button Text="Register" 
+                    TextColor="White"
+                    BackgroundColor="#EE5007"
+                    HorizontalOptions="FillAndExpand"/>
+
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>

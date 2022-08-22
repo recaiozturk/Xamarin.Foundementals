@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.StackLayoutDemo2">
+    
+    
+
+    <StackLayout>
+        <Label Text="Photo Gallary"  Margin="10"></Label>
+        <Image Margin="10" HorizontalOptions="Start" Source="https://picsum.photos/seed/picsum/800/600"/>
+
+        <StackLayout Orientation="Horizontal"
+                     Spacing="20"
+                     Padding="10">
+            <Button Text="Like" />
+            <Button Text="Comment"/>
+            <Button Text="Share"/>
+        </StackLayout>
+
+        <StackLayout Padding="10" Spacing="20">
+            <BoxView HeightRequest="1" BackgroundColor="Gray"/>
+            <Label Text="150 Likes" FontAttributes="Bold"/>
+            <Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.FontIconsControl" Padding="30">
+
+    <StackLayout>
+        <Label Text="&#xf0f3;" 
+           FontSize="40"
+           FontFamily="{StaticResource FontAwesomeReguler}"/>
+
+        <Label Text="&#xf017; Alarm" 
+           FontSize="40"
+           FontFamily="{StaticResource FontAwesomeReguler}"/>
+
+        <Label Text="&#xf086;" 
+           FontSize="40"
+           FontFamily="{StaticResource FontAwesomeReguler}"
+           TextColor="Aquamarine"/>
+
+
+    </StackLayout>
+
+    
+</ContentPage>

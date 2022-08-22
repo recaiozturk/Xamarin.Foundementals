@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.RelativeLayoutDemo">
+
+    <RelativeLayout>
+        <Image x:Name="bg" 
+               Source="https://cdn.kayiprihtim.com/wp-content/uploads/2019/03/gotham-batman-ust.jpg"
+               Opacity="0.8"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.3}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0,Constant=-20}"/>
+
+        <StackLayout Orientation="Horizontal" Spacing="20"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=bg,Property=Height,Factor=1,Constant=-50}"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=bg,Property=Width,Factor=0.3,Constant=-95}">
+            <Image Source="https://static.wikia.nocookie.net/dc-and-marvel/images/5/57/Catwoman_by_phil_cho.png/revision/latest?cb=20190206045259"
+                   HeightRequest="100"/>
+
+            <Label Text="Selina Kyle"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   Margin="0,0,0,15"/>
+        </StackLayout>
+
+        <StackLayout
+            BackgroundColor="Beige"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=bg,Property=Height,Factor=1,Constant=60}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=bg,Property=Width,Factor=0.1,Constant=-20}">
+
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/800px-Sign-check-icon.png" HeightRequest="35"/>
+                <Label Text="Meslek : " VerticalOptions="Center"/>
+                <Label Text="Thief" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/800px-Sign-check-icon.png" HeightRequest="35"/>
+                <Label Text="City : " VerticalOptions="Center"/>
+                <Label Text="Gotham" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/800px-Sign-check-icon.png" HeightRequest="35"/>
+                <Label Text="Power : " VerticalOptions="Center"/>
+                <Label Text="Sneak,Uncatchable" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/800px-Sign-check-icon.png" HeightRequest="35"/>
+                <Label Text="Friend : " VerticalOptions="Center"/>
+                <Label Text="The Batman" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/800px-Sign-check-icon.png" HeightRequest="35"/>
+                <Label Text="NickName : " VerticalOptions="Center"/>
+                <Label Text="Catwoman" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black"/>
+            </StackLayout>
+
+
+
+
+        </StackLayout>
+               
+    </RelativeLayout>
+    
+</ContentPage>

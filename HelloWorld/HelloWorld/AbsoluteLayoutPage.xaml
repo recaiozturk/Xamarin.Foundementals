@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.AbsoluteLayoutPage">
+
+    <AbsoluteLayout BackgroundColor="Aqua">
+
+        <BoxView BackgroundColor="Yellow"
+                 AbsoluteLayout.LayoutBounds="10,10,100,100"
+                 AbsoluteLayout.LayoutFlags="None"/>
+        <!--  AbsoluteLayout.LayoutBounds 10x,10y,100 e 100  boyutunda-->
+
+        <BoxView BackgroundColor="Blue"         
+                 AbsoluteLayout.LayoutBounds="0,0,0.5,50"
+                 AbsoluteLayout.LayoutFlags="WidthProportional"/>
+        <!--  AbsoluteLayout.LayoutFlags :WidthProportional : Genişliği yüzde oalrak verir-->
+
+        <BoxView BackgroundColor="Green"         
+                 AbsoluteLayout.LayoutBounds="0,0,100,0.5"
+                 AbsoluteLayout.LayoutFlags="HeightProportional"/>
+        <!--  AbsoluteLayout.LayoutFlags :HeightProportional : Yüksekliği yüzde oalrak verir-->
+        
+        <BoxView BackgroundColor="Gold"         
+                 AbsoluteLayout.LayoutBounds="0,0,0.5,0.5"
+                 AbsoluteLayout.LayoutFlags="SizeProportional"/>
+        <!--  AbsoluteLayout.LayoutFlags :SizeProportional : Yüksekliği ve genişliği  yüzde oalrak verir-->
+
+        <BoxView BackgroundColor="Red"         
+                 AbsoluteLayout.LayoutBounds="1,1,50,50"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <!--  AbsoluteLayout.LayoutFlags :PositionProportional : kordinatlara (x ve y ye)  yüzde olarak verir-->
+
+        <BoxView BackgroundColor="Purple"         
+                 AbsoluteLayout.LayoutBounds="50,1,50,50"
+                 AbsoluteLayout.LayoutFlags="YProportional"/>
+        <!--  AbsoluteLayout.LayoutFlags :YProportional : Y yi yüzde olarak verir-->
+
+        <BoxView BackgroundColor="Black"         
+                 AbsoluteLayout.LayoutBounds="0,1,1,50"
+                 AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
+        <!--  AbsoluteLayout.LayoutFlags :footer olarak sayfanın altında olsun-->
+
+
+
+    </AbsoluteLayout>
+    
+</ContentPage>

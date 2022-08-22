@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.StackLayoutDemo3"
+             Padding="20,30"
+             BackgroundColor="#f1f1f1">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Akıllı Saatler" TextColor="#fe9801"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               FontSize="30"/>
+
+            <StackLayout BackgroundColor="White" Padding="10,15" >
+
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="https://productimages.hepsiburada.net/s/126/222-222/110000076903466.jpg/format:webp" WidthRequest="100"/>
+                    <StackLayout>
+                        <Label Text="Apple Watch Seri 7"
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+                        <Label Text="Apple Watch Seri 7 Gps, 45MM Siyah Alüminyum Kasa ve Siyah Spor Kordon - Regular MKN53TU/A"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                            <Label Text="2099 TL" TextColor="#fe9801" 
+                               FontAttributes="Bold"
+                               FontSize="22"
+                               Padding="0,7"
+                               />
+                            <Button Text="Ürrünü İncele"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+
+
+
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

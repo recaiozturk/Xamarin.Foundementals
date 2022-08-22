@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Controls.LabelControls">
+
+
+    <StackLayout Padding="20">
+        <Label Text="Underline"
+               TextDecorations="Underline"/>
+
+        <Label Text="StrikeThgough"
+               TextDecorations="Strikethrough"/>
+
+        <Label Text="Underline-Strikethrough"
+               TextDecorations="Underline,Strikethrough"/>
+        
+        <!--Line break modde satır basına ve sonuna ... koyarak artan kısmı kesebiliriz-->
+        <Label Text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
+               LineBreakMode="TailTruncation"
+               MaxLines="2"/>
+
+        <Label LineBreakMode="WordWrap">
+
+
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span TextColor="Red" Text="There are red texts "/>
+                    <Span  TextDecorations="Underline" Text="There are many"/>
+                    <Span BackgroundColor="Yellow"  TextDecorations="Underline" Text="There are many variations  many"/>
+                    <Span  Text="link" TextColor="Blue"  TextDecorations="Underline">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="https://oem-calculater.netlify.app">
+                                
+                            </TapGestureRecognizer>
+                        </Span.GestureRecognizers>
+                    </Span>
+                </FormattedString>
+            </Label.FormattedText>
+            
+        </Label>
+               
+               
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Controls.TimePickerControl">
+
+    <StackLayout Padding="20">
+
+        <TimePicker 
+            x:Name="timePicker"
+            Format="T"
+            Time="11:00:00"
+            PropertyChanged="timePicker_PropertyChanged">
+            <!--  mm :sadddece dakika-->
+            <!--  hh :sadddece saat-->
+            <!--  ss :sadddece saniye-->
+            <!--  tt :sadddece am ve mp-->
+        </TimePicker>
+
+        <Label x:Name="labelResult"/>
+        
+        <!--Uygulama-->
+        <Label Text="----Uygulama----"/>
+        <Entry x:Name="entryUygulama" Placeholder="Enter Commend"/>
+
+        <TimePicker 
+            x:Name="timePicker2"
+            Format="T"
+            Time="11:00:00"
+            PropertyChanged="timePicker2_PropertyChanged"/>
+
+        <StackLayout Orientation="Horizontal" Padding="10">
+            <Label Text="Enable" x:Name="lblUygulama" VerticalOptions="Center"/>
+            <Switch x:Name="switchuygulama" HorizontalOptions="EndAndExpand"
+                    Toggled="switchuygulama_Toggled"/>
+        </StackLayout>
+
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.AbsoluteLayoutDemo1">
+
+
+    <AbsoluteLayout>
+        <Image Source="https://media.wired.com/photos/619e93ab9a44a89f76f651d6/master/w_2240,c_limit/Gear-Mobvoi-TicWatch-Pro-3-Ultra.jpg"
+           Aspect="AspectFill"
+               AbsoluteLayout.LayoutBounds="0,0,1,0.8"
+               AbsoluteLayout.LayoutFlags="All"/>
+        <!--AspectFill :Çözünürlüğü koru ve içinde bulunduğun container i doldur.-->
+
+        <BoxView BackgroundColor="White"
+                 CornerRadius="40"
+                 AbsoluteLayout.LayoutBounds="0,0.8,1,200"
+                 AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
+
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0.8,1,200"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+                     Padding="30"
+                     HorizontalOptions="Center" VerticalOptions="Center">
+
+            
+                <Label Text="Samsun Galaxy 10" FontSize="28" FontAttributes="Bold" />
+                <Label FontSize="14" Text="Apple Watch Seri 3 GPS 42 mm Gümüş Rengi Alüminyum Kasa ve Beyaz Spor Kordon" />
+            
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="2099" TextColor="#fe9801"
+                       FontAttributes="Bold"
+                       FontSize="24"/>
+
+                <Label Text="3099" TextColor="#5b5d6a"
+                       TextDecorations="Strikethrough"
+                       FontSize="20"/>
+            </StackLayout>
+
+            <Button Font="18" Text="Add To Cart"
+                    BackgroundColor="#263f44"
+                    TextColor="White"
+                    FontAttributes="Bold"/>
+
+        </StackLayout>
+    </AbsoluteLayout>
+
+    
+</ContentPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Lists.SimpleListView">
+
+    <!--xaml tarafında-->
+    <!--<ListView x:Name="listview">
+        <ListView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>item 1</x:String>
+                <x:String>item 2</x:String>
+                <x:String>item 3</x:String>
+            </x:Array>
+        </ListView.ItemsSource>
+    </ListView>-->
+
+    <ListView x:Name="listview" 
+              SeparatorVisibility="Default" 
+              SeparatorColor="Black"
+              >
+
+        <ListView.Header>
+            <StackLayout>
+                <Label Text="Header"
+                       TextColor="red"
+                       BackgroundColor="Gray"/>
+
+            </StackLayout>
+        </ListView.Header>
+
+        <ListView.Footer>
+            <StackLayout>
+                <Label Text="Footer"
+                       TextColor="Green"
+                       BackgroundColor="Gray"/>
+
+            </StackLayout>
+        </ListView.Footer>
+
+    </ListView>
+
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.FlexLayoutPage">
+    <FlexLayout Direction="Row" 
+                JustifyContent="Center" 
+                AlignItems="Center">
+
+        <BoxView Color="Red" FlexLayout.AlignSelf="Center" FlexLayout.Order="3"
+                 FlexLayout.Grow="2"/>
+        <BoxView Color="Green" FlexLayout.AlignSelf="Center" FlexLayout.Order="2"
+                 FlexLayout.Grow="1"/>
+        <BoxView Color="Blue" FlexLayout.AlignSelf="Center" FlexLayout.Order="3" 
+                 FlexLayout.Grow="1"/>
+    </FlexLayout>
+</ContentPage>

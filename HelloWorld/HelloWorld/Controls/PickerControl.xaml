@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Controls.PickerControl">
+    
+    <StackLayout Padding="20">
+        
+        <Picker x:Name="picker" Title="Select a modal"
+                SelectedIndexChanged="picker_SelectedIndexChanged">
+            <!--<Picker.Items>
+                <x:String>Opel</x:String>
+                <x:String>Mazda</x:String>
+                <x:String>Mercedes</x:String>
+                <x:String>Honda</x:String>
+            </Picker.Items>-->
+        </Picker>
+
+        <Label Text= "{Binding Source={x:Reference picker},Path=SelectedItem}"/>
+
+        <Label x:Name="labelResult"/>
+    </StackLayout>
+</ContentPage>

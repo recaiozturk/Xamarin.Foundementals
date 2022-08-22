@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.StylingPage">
+
+    <ContentPage.Resources>
+        <Color x:Key="BtnSubmitBgColor">#007</Color>
+    </ContentPage.Resources>
+
+    <Grid Padding="30" BackgroundColor="{StaticResource PageBgColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Entry BackgroundColor="{StaticResource PageBgColor}" Placeholder="{StaticResource SubjectPlaceHolder}" Grid.Row="0"/>
+
+        <StackLayout Grid.Row="1" BackgroundColor="White" Padding="1">
+            <Editor x:Name="editor"  VerticalOptions="FillAndExpand"/>
+        </StackLayout>
+
+
+        <StackLayout Orientation="Vertical" Grid.Row="2">
+            <Button Text="Submit" 
+                    Style="{StaticResource button}"/>
+            <Button Text="Cancel" 
+                    BackgroundColor="{StaticResource BtnCancelBgColor}"
+                    TextColor="{StaticResource BtnTextColor}"
+                    FontAttributes="{StaticResource BtnFontStyle}"/>
+        </StackLayout>
+    </Grid>
+    
+</ContentPage>

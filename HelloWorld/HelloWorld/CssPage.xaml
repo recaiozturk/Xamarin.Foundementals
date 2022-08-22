@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.CssPage">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="Styles/style.css"/>
+        <StyleSheet>
+            <![CDATA[
+            
+               
+ 
+            
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+
+    <StackLayout StyleClass="header">
+        <Label Text="Css in Xamarin Forms"/>
+        <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Xamarin-logo.svg/1280px-Xamarin-logo.svg.png"/>
+        <Entry/>
+        <Button Text="Submit" StyleId="btnSubmit"/>
+    </StackLayout>
+    
+</ContentPage>

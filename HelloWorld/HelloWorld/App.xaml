@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.App">
+    <Application.Resources>
+
+
+        <ResourceDictionary Source="ThemeResources/BlueTheme.xaml"></ResourceDictionary>
+        
+        
+        
+        <x:String x:Key="SubjectPlaceHolder">Enter Subject</x:String>
+        <Color x:Key="BtnTextColor">White</Color>
+        <FontAttributes x:Key="BtnFontStyle">Bold</FontAttributes>
+        <Color x:Key="BtnSubmitBgColor">#007bff</Color>
+        <Color x:Key="BtnCancelBgColor">#dc3545</Color>
+
+
+        <Style x:Key="button" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Aquamarine"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="FontAwesomeReguler">
+                <On Platform="Android" Value="Font Awesome 6 Free-Regular-400.otf#Font Awesome 6 Free Reguler"/>
+                <On Platform="iOS" Value="Font Awesome 6 Free Reguler"/>
+            </OnPlatform>
+        </ResourceDictionary>
+        
+        
+    </Application.Resources>
+</Application>
