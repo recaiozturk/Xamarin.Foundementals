@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Lists.ViewCells"
+             Padding="4">
+
+    <!--HasUnevenRows="true" : satır detayı fazlaysa 90 dan fazla kullanır yuksekligi default oalrak false dir her satır aynı seviyededir-->  
+
+    <ListView x:Name="lisView"
+              RowHeight="90"
+              >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal"
+                                 
+                                 Padding="4">
+                        <Image Source="{Binding ImageUrl}"/>
+                        <StackLayout>
+                            <Label Text="{Binding Name}"
+                                   TextColor="Black"/>
+                            <Label Text="{Binding Director}"
+                                   TextColor="Gray"/>
+                        </StackLayout>
+                        <Button HorizontalOptions="EndAndExpand"
+                                Text="&#xf35a;"
+                                FontSize="30"
+                                TextColor="Gray"
+                                FontFamily="{StaticResource FontAwesomeReguler}"
+                                BackgroundColor="White"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>

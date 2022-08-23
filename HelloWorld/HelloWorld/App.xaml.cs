@@ -13,7 +13,7 @@ namespace HelloWorld
         {
             InitializeComponent();
 
-            MainPage = new ModelBinding();
+            MainPage = new ObservableData();
         }
 
         protected override void OnStart()

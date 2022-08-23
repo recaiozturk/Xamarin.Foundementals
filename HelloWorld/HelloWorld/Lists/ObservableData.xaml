@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Lists.ObservableData">
+
+
+
+    <StackLayout>
+        <ListView x:Name="lisView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Name}" 
+                           Detail="{Binding Director}"
+                           ImageSource="{Binding ImageUrl}"
+                           TextColor="Black"
+                           DetailColor="Gray"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label x:Name="lblCount"/>
+        <Button x:Name="addMovie" Text="Add Movie" Clicked="addMovie_Clicked"/>
+        <Button x:Name="deleteMovie" Text="Delete Movie" Clicked="deleteMovie_Clicked"/>
+        
+
+    </StackLayout>
+    
+</ContentPage>
