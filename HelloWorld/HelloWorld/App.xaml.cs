@@ -13,7 +13,7 @@ namespace HelloWorld
         {
             InitializeComponent();
 
-            MainPage = new ObservableData();
+            MainPage = new ListViewEvents();
         }
 
         protected override void OnStart()
