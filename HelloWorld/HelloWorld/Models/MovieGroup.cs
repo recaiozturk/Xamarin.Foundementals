@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace HelloWorld.Models
 {
-    public class MovieGroup:List<Movie>
+    public class MovieGroup:ObservableCollection<Movie>
     {
         public string Title { get; set; }
         public string ShorName { get; set; }

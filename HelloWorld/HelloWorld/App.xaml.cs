@@ -13,7 +13,7 @@ namespace HelloWorld
         {
             InitializeComponent();
 
-            MainPage = new AddingButtons();
+            MainPage = new ContextActions();
         }
 
         protected override void OnStart()
