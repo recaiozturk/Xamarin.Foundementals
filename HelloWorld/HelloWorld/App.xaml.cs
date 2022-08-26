@@ -1,6 +1,7 @@
 ﻿using HelloWorld.Controls;
 using HelloWorld.DataBindings;
 using HelloWorld.Lists;
+using HelloWorld.Navigation;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,8 +13,8 @@ namespace HelloWorld
         public App()
         {
             InitializeComponent();
+            MainPage = new NavigationPage(new FirstPage());
 
-            MainPage = new PullToRefresh();
         }
 
         protected override void OnStart()

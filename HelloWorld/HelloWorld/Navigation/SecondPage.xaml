@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Navigation.SecondPage"
+             Title="Second Page">
+    
+    <StackLayout HorizontalOptions="Center" 
+                 VerticalOptions="Center">
+        <Label TextColor="Red" x:Name="lblResult" HorizontalOptions="Center" Text="{Binding Name}"/>
+        <Label TextColor="Red" x:Name="lblResult2" HorizontalOptions="Center" Text="{Binding Director}"/>
+        <Label Text="Second Page" HorizontalOptions="Center"/>
+        <Button x:Name="NextPageButton"
+                Text="Next Page"
+                Clicked="NextPageButton_Clicked"/>
+        <Button x:Name="PrevPageButton"
+                Text="Previous Page"
+                Clicked="PrevPageButton_Clicked"/>
+    </StackLayout>
+    
+</ContentPage>
