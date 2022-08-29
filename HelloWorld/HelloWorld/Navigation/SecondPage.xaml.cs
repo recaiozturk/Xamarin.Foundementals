@@ -13,6 +13,11 @@ namespace HelloWorld.Navigation
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SecondPage : ContentPage
     {
+
+        public SecondPage()
+        {
+            InitializeComponent();
+        }
         public SecondPage(Movie m)
         {
             InitializeComponent();

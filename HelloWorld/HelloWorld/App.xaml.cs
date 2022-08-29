@@ -13,7 +13,7 @@ namespace HelloWorld
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MasterPage());
+            MainPage = new NavigationPage(new ListViewMenu());
 
         }
 
