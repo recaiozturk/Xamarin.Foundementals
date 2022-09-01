@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Navigation.TableViewMenu">
+
+    <TableView Intent="Menu">
+        <TableSection Title="Category 1" TextColor="Blue">
+            <TextCell Text="First" Tapped="navigateToPage" CommandParameter="FirstPage"/>
+            <TextCell Text="Second" Tapped="navigateToPage" CommandParameter="SecondPage"/>
+            <TextCell Text="Third" Tapped="navigateToPage" CommandParameter="ThirdPage"/>
+        </TableSection>
+        <TableSection Title="Category 2" TextColor="Blue">
+            <TextCell Text="First" Tapped="navigateToPage" CommandParameter="FirstPage"/>
+            <TextCell Text="Second" Tapped="navigateToPage" CommandParameter="SecondPage"/>
+            <TextCell Text="Third" Tapped="navigateToPage" CommandParameter="ThirdPage"/>
+        </TableSection>
+        <TableSection Title="Category 3" TextColor="Blue">
+            <TextCell Text="First" Tapped="navigateToPage" CommandParameter="FirstPage"/>
+            <TextCell Text="Second" Tapped="navigateToPage" CommandParameter="SecondPage"/>
+            <TextCell Text="Third" Tapped="navigateToPage" CommandParameter="ThirdPage"/>
+        </TableSection>
+    </TableView>
+    
+    
+</ContentPage>
