@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Navigation.TappedPageMenu"
+             xmlns:local="clr-namespace:HelloWorld.Navigation;assembly=HelloWorld">
+
+    <TabbedPage.Children>
+
+        <ContentPage Title="Page 1" IconImageSource="share.png">
+            <Label Text="Page 1" VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+        </ContentPage>
+
+        <ContentPage Title="Page 2" IconImageSource="search.png">
+            <Label Text="Page 2" VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+        </ContentPage>
+
+        <ContentPage Title="Page 3" IconImageSource="settings.png">
+            <Label Text="Page 3" VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+        </ContentPage>
+
+        <local:FirstPage Title="First" IconImageSource="settings.png">
+            
+        </local:FirstPage>
+
+        <NavigationPage Title="Navi" IconImageSource="settings.png">
+            <x:Arguments>
+                <local:FirstPage/>
+            </x:Arguments>
+        </NavigationPage>
+
+        
+
+    </TabbedPage.Children>
+    
+</TabbedPage>

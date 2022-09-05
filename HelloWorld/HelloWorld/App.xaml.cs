@@ -13,7 +13,7 @@ namespace HelloWorld
         public App()
         {
             InitializeComponent();
-            MainPage = new MasterDetailPageMenu();
+            MainPage = new TappedPageMenu();
 
         }
 
