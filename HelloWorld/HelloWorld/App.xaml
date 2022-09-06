@@ -28,7 +28,10 @@
                 <On Platform="iOS" Value="Font Awesome 6 Free Reguler"/>
             </OnPlatform>
         </ResourceDictionary>
+
+
         
-        
+
+
     </Application.Resources>
 </Application>

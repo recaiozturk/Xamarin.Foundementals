@@ -1,4 +1,5 @@
-﻿using HelloWorld.Controls;
+﻿using HelloWorld.CollectionViews;
+using HelloWorld.Controls;
 using HelloWorld.DataBindings;
 using HelloWorld.Lists;
 using HelloWorld.Navigation;
@@ -13,7 +14,7 @@ namespace HelloWorld
         public App()
         {
             InitializeComponent();
-            MainPage = new CarousalPage();
+            MainPage = new DataBindingCollectionView();
 
         }
 
