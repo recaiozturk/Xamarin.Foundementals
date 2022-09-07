@@ -18,15 +18,10 @@
 
                 <Image Grid.RowSpan="2"
                            Source="{Binding ImageUrl}"
-                           HeightRequest="70"
-                           WidthRequest="70"/>
+                           HeightRequest="150"
+                           WidthRequest="100"/>
 
-                <Label Grid.Column="1"
-                           Text="{Binding Name}"/>
-
-                <Label Grid.Column="1"
-                           Grid.Row="1"
-                           Text="{Binding Director}"/>
+                
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="populerMovieDataTemplate">
@@ -59,9 +54,33 @@
             PopulerMovieDataTemplate="{StaticResource populerMovieDataTemplate}"/>
     </ContentPage.Resources>
 
-    <CollectionView x:Name="movieList"
-                    ItemTemplate="{StaticResource movieSelector}">
+    
+
+        <CollectionView x:Name="movieList"                   
+                    ItemTemplate="{StaticResource movieDataTemplate}">
+        <!--<CollectionView.Header>
+            <StackLayout BackgroundColor="LightGray">
+                <Label Margin="20,40"
+                       Text="Movies"
+                       FontAttributes="Bold"/>
+            </StackLayout>
+        </CollectionView.Header>-->
+        <CollectionView.ItemsLayout>
+
+            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="5"></LinearItemsLayout>
+        </CollectionView.ItemsLayout>
+        <!--<CollectionView.Footer>
+            <StackLayout BackgroundColor="LightGray">
+                <Label Margin="20,30"
+                       Text="Movies Footer"
+                       FontAttributes="Bold"/>
+            </StackLayout>
+        </CollectionView.Footer>-->
         
     </CollectionView>
+
     
+
+
+
 </ContentPage>
