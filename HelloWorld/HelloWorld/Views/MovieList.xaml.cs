@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HelloWorld.Models;
+using HelloWorld.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,8 @@ namespace HelloWorld.Views
         public MovieList()
         {
             InitializeComponent();
+
+            BindingContext = new MovieViewModel();
         }
     }
 }

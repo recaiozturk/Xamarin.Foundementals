@@ -3,6 +3,7 @@ using HelloWorld.Controls;
 using HelloWorld.DataBindings;
 using HelloWorld.Lists;
 using HelloWorld.Navigation;
+using HelloWorld.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,7 +15,7 @@ namespace HelloWorld
         public App()
         {
             InitializeComponent();
-            MainPage = new DataBindingCollectionView();
+            MainPage = new NavigationPage(new Views.MainPage());
 
         }
 

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:HelloWorld.Views"
+             x:Class="HelloWorld.Views.MainPage">
+
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Selections">
+                <TextCell Text="Movie List" Detail="Text"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:MovieList}"/>
+
+                
+                
+            </TableSection>
+        </TableRoot>
+    </TableView>
+    
+</ContentPage>

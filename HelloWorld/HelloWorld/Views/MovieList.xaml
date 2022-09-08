@@ -4,8 +4,9 @@
              x:Class="HelloWorld.Views.MovieList">
     
     
-    <CollectionView x:Name="movieList" >
-
+    <CollectionView x:Name="movieList" 
+                    ItemsSource="{Binding Movies}">
+            
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Grid Padding="10">
@@ -22,6 +23,14 @@
                            Source="{Binding ImageUrl}"
                            HeightRequest="150"
                            WidthRequest="100"/>
+                    <Label Grid.Column="1"
+                           Text="{Binding Name}"
+                           FontAttributes="Bold"    />
+
+                    <Label Grid.Column="1"
+                           Grid.Row="1"
+                           Text="{Binding Director}"/>
+
 
 
                 </Grid>
