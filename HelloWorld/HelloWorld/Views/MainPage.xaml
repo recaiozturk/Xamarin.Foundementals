@@ -11,8 +11,16 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:MovieList}"/>
 
-                
-                
+                <TextCell Text="Single Selection" Detail="Text"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:SingleSelectionPage}"/>
+
+                <TextCell Text="Multiple Selection" Detail="Text"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:MultipleSelectionPage}"/>
+
+
+
             </TableSection>
         </TableRoot>
     </TableView>
