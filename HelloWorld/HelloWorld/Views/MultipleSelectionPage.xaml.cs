@@ -1,4 +1,5 @@
 ﻿using HelloWorld.Models;
+using HelloWorld.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,27 +17,30 @@ namespace HelloWorld.Views
         public MultipleSelectionPage()
         {
             InitializeComponent();
+
+            BindingContext = new MovieViewModel();
+        }
+
+        private void movieList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var previous = e.PreviousSelection;
+            var current = e.CurrentSelection;
+
+
+
+            for (int i = 0; i < previous.Count; i++)
+            {
+                lblCurrent.Text += (previous[i] as Movie)?.Name + " ";
+            }
+
+            for (int i = 0; i < current.Count; i++)
+            {
+                lblCurrent.Text += (current[i] as Movie)?.Name + " ";
+            }
         }
     }
 
-    private void movieList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        var previous = e.PreviousSelection;
-        var current = e.CurrentSelection;
-
-        
-
-        for (int i = 0; i < previous.Count; i++)
-        {
-            lblPrevious.Text += (previous[i] as Movie)?.Name + " ";
-        }
-
-        for (int i = 0; i < current.Count; i++)
-        {
-            lblCurrent.Text += (current[i] as Movie)?.Name + " ";
-        }
-
-    }
+    
 
         
         

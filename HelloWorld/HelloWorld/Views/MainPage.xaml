@@ -19,6 +19,10 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:MultipleSelectionPage}"/>
 
+                <TextCell Text="Pre Selection" Detail="Text"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:PreSelectionPage}"/>
+
 
 
             </TableSection>
