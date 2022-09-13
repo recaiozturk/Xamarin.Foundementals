@@ -3,12 +3,80 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HelloWorld.AppShell">
 
-    <ShellContent Title="Macera" >
+    <FlyoutItem Title="Filmler" Icon="search.png">
+
+        <Tab Title="Yabancı" Icon="search.png">
+            <ShellContent Title="Macera" >
+                <ContentPage>
+                    <Label Text="Mecera Filmleri"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+                </ContentPage>
+            </ShellContent>
+
+            <ShellContent Title="Aksiyon" >
+                <ContentPage>
+                    <Label Text="Aksiyon Filmleri"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Yerli" Icon="search.png">
+            <ShellContent Title="Macera" >
+                <ContentPage>
+                    <Label Text="Mecera Filmleri"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+                </ContentPage>
+            </ShellContent>
+
+            <ShellContent Title="Aksiyon" >
+                <ContentPage>
+                    <Label Text="Aksiyon Filmleri"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+                </ContentPage>
+            </ShellContent>
+            <ShellContent Title="Gerilim" >
+                <ContentPage>
+                    <Label Text="Gerilim Filmleri"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+        
+        
+    </FlyoutItem>
+
+
+    <FlyoutItem Title="Diziler" Icon="settings.png">
+        <ShellContent Title="Macera " >
+            <ContentPage>
+                <Label Text="Mecera Dizileri"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            </ContentPage>
+        </ShellContent>
+
+        <ShellContent Title="Aksiyon" >
+            <ContentPage>
+                <Label Text="Aksiyon Dizileri"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            </ContentPage>
+        </ShellContent>
+
+    </FlyoutItem>
+
+
+    <ShellContent Title="Belgesel" Icon="share.png" >
         <ContentPage>
-            <Label Text="Mecera Filmleri"
+            <Label Text="Doğa Belgeselleri"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
         </ContentPage>
     </ShellContent>
-  
+
 </Shell>
