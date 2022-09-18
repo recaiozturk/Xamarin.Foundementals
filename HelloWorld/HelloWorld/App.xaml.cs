@@ -16,10 +16,25 @@ namespace HelloWorld
     {
         public static string  FolderPath { get; private set; }
 
+        private static NoteDatabase database;
+
+        //Singleten işlemi -varolan objeyi her zaman kullanıyoruz  --her yeni istekte coccection objesi olusturmuyoruz
+        public static NoteDatabase Database
+        {
+            get 
+            {
+                if (database == null)
+                {
+                    database = new NoteDatabase(Path.Combine(App.FolderPath, "NotesDb.db3"));
+                }
+                return database;
+            }
+        }
+
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new DemoFileSystemNotesPage());
+            MainPage = new RestApiPage();
 
             FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
 
