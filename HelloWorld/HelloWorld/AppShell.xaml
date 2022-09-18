@@ -1,82 +1,99 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Shell xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HelloWorld.AppShell">
+﻿    
+    <Shell xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           x:Class="HelloWorld.AppShell"
+           FlyoutBehavior="Flyout"
+           FlyoutBackgroundImage="gradientbackground.png"
+           FlyoutBackgroundImageAspect="AspectFill">
 
-    <FlyoutItem Title="Filmler" Icon="search.png">
+        <Shell.FlyoutHeaderTemplate>
+            <DataTemplate>
+                <Grid HeightRequest="200">
+                    <Image  Aspect="Fill"
+                            Source="gradientbackground.png"
+                            Opacity="0.6"/>
+                    <Label Text="Movies"
+                           TextColor="White"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </Grid>
+            </DataTemplate>
+        </Shell.FlyoutHeaderTemplate>
 
-        <Tab Title="Yabancı" Icon="search.png">
-            <ShellContent Title="Macera" >
+        <FlyoutItem Title="Filmler" Icon="search.png">
+
+            <Tab Title="Yabancı" Icon="search.png">
+                <ShellContent Title="Macera" >
+                    <ContentPage>
+                        <Label Text="Mecera Filmleri"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                    </ContentPage>
+                </ShellContent>
+
+                <ShellContent Title="Aksiyon" >
+                    <ContentPage>
+                        <Label Text="Aksiyon Filmleri"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                    </ContentPage>
+                </ShellContent>
+            </Tab>
+            <Tab Title="Yerli" Icon="search.png">
+                <ShellContent Title="Macera" >
+                    <ContentPage>
+                        <Label Text="Mecera Filmleri"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                    </ContentPage>
+                </ShellContent>
+
+                <ShellContent Title="Aksiyon" >
+                    <ContentPage>
+                        <Label Text="Aksiyon Filmleri"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                    </ContentPage>
+                </ShellContent>
+                <ShellContent Title="Gerilim" >
+                    <ContentPage>
+                        <Label Text="Gerilim Filmleri"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                    </ContentPage>
+                </ShellContent>
+            </Tab>
+        
+        
+        </FlyoutItem>
+
+
+        <FlyoutItem Title="Diziler" Icon="settings.png">
+            <ShellContent Title="Macera " >
                 <ContentPage>
-                    <Label Text="Mecera Filmleri"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
+                    <Label Text="Mecera Dizileri"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
                 </ContentPage>
             </ShellContent>
 
             <ShellContent Title="Aksiyon" >
                 <ContentPage>
-                    <Label Text="Aksiyon Filmleri"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
-                </ContentPage>
-            </ShellContent>
-        </Tab>
-        <Tab Title="Yerli" Icon="search.png">
-            <ShellContent Title="Macera" >
-                <ContentPage>
-                    <Label Text="Mecera Filmleri"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
+                    <Label Text="Aksiyon Dizileri"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
                 </ContentPage>
             </ShellContent>
 
-            <ShellContent Title="Aksiyon" >
-                <ContentPage>
-                    <Label Text="Aksiyon Filmleri"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
-                </ContentPage>
-            </ShellContent>
-            <ShellContent Title="Gerilim" >
-                <ContentPage>
-                    <Label Text="Gerilim Filmleri"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
-                </ContentPage>
-            </ShellContent>
-        </Tab>
-        
-        
-    </FlyoutItem>
+        </FlyoutItem>
 
 
-    <FlyoutItem Title="Diziler" Icon="settings.png">
-        <ShellContent Title="Macera " >
+        <ShellContent Title="Belgesel" Icon="share.png" >
             <ContentPage>
-                <Label Text="Mecera Dizileri"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
+                <Label Text="Doğa Belgeselleri"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
             </ContentPage>
         </ShellContent>
 
-        <ShellContent Title="Aksiyon" >
-            <ContentPage>
-                <Label Text="Aksiyon Dizileri"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
-            </ContentPage>
-        </ShellContent>
-
-    </FlyoutItem>
-
-
-    <ShellContent Title="Belgesel" Icon="share.png" >
-        <ContentPage>
-            <Label Text="Doğa Belgeselleri"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
-        </ContentPage>
-    </ShellContent>
-
-</Shell>
+    </Shell>
